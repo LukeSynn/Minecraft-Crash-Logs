@@ -1,0 +1,103 @@
+---- Minecraft Crash Report ----
+// I just don't know what went wrong :(
+
+Time: 3/21/18 4:20 PM
+Description: Ticking entity
+
+java.lang.ClassCastException: afn cannot be cast to afj
+	at adb.a(SourceFile:41)
+	at acz.a(SourceFile:22)
+	at adl.a(SourceFile:94)
+	at abw.cL(SourceFile:644)
+	at abv.l(SourceFile:1895)
+	at abw.l(SourceFile:504)
+	at ajs.l(SourceFile:33)
+	at aki.l(SourceFile:257)
+	at abv.S_(SourceFile:1750)
+	at abw.S_(SourceFile:284)
+	at ajs.S_(SourceFile:38)
+	at aki.S_(SourceFile:232)
+	at ajg.S_(SourceFile:252)
+	at aug.a(SourceFile:1617)
+	at se.a(SourceFile:705)
+	at aug.h(SourceFile:1593)
+	at aug.p_(SourceFile:1475)
+	at se.p_(SourceFile:538)
+	at net.minecraft.server.MinecraftServer.w(SourceFile:702)
+	at rp.w(SourceFile:354)
+	at net.minecraft.server.MinecraftServer.v(SourceFile:627)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:532)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at adb.a(SourceFile:41)
+	at acz.a(SourceFile:22)
+	at adl.a(SourceFile:94)
+	at abw.cL(SourceFile:644)
+	at abv.l(SourceFile:1895)
+	at abw.l(SourceFile:504)
+	at ajs.l(SourceFile:33)
+	at aki.l(SourceFile:257)
+	at abv.S_(SourceFile:1750)
+	at abw.S_(SourceFile:284)
+	at ajs.S_(SourceFile:38)
+	at aki.S_(SourceFile:232)
+	at ajg.S_(SourceFile:252)
+	at aug.a(SourceFile:1617)
+	at se.a(SourceFile:705)
+	at aug.h(SourceFile:1593)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:drowned (ajg)
+	Entity ID: 306595
+	Entity Name: Drowned
+	Entity's Exact location: 988.15, 59.52, 37.30
+	Entity's Block location: World: (988,59,37), Chunk: (at 12,3,5 in 61,2; contains blocks 976,0,32 to 991,255,47), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Entity's Momentum: 0.00, -0.03, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at aug.p_(SourceFile:1475)
+	at se.p_(SourceFile:538)
+
+-- Affected level --
+Details:
+	Level name: aqua1
+	All players: 1 total; [sg['Stubbornmule'/288228, l='aqua1', x=990.45, y=11.00, z=129.17]]
+	Chunk stats: ServerChunkCache: 713 Drop: 0
+	Level seed: -9193889702175967349
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (232,64,68), Chunk: (at 8,4,4 in 14,4; contains blocks 224,0,64 to 239,255,79), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1080016 game time, 1144429 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 58668 (now: false), thunder time: 76528 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.w(SourceFile:702)
+	at rp.w(SourceFile:354)
+	at net.minecraft.server.MinecraftServer.v(SourceFile:627)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:532)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 18w11a
+	Operating System: Linux (amd64) version 4.9.0-6-amd64
+	Java Version: 1.8.0_162, Oracle Corporation
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 561331312 bytes (535 MB) / 1038024704 bytes (989 MB) up to 7265714176 bytes (6929 MB)
+	JVM Flags: 2 total; -Xms1G -Xmx7G
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [sg['Stubbornmule'/288228, l='aqua1', x=990.45, y=11.00, z=129.17]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
